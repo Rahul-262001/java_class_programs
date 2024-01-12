@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #all{
+            background-color: aliceblue;
+            background: linear-gradient(45deg,rgb(200,90,5) 10%,rgb(0,180,99) 50%,rgb(10,120,160) 60%);
+            display: flex;
+            justify-content: center;
+            align-items: center;/*vertically center*/
+            height: 100vh;
+            width: 100%;
+        }
+        .move{
+            margin: 3%;
+            border-radius: 10%;
+            background-color: rgb(241, 112, 0);
+            height: 300px;
+            width: 300px;
+            position: relative;
+            transition: 2s ease;
+        }
+        .move:hover{
+            transform: rotate(360deg) scale(1.5, 1.5);
+        }
+        header {
+            text-align: center;
+            background-color: #808080;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        form {
+            display: inline-block;
+        }
+        label, input[type="text"], input[type="password"], input[type="submit"] {
+            /*display: block;*/
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 200px;
+            padding: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4C0F50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="reset"]{
+            padding: 10px 20px;
+            background-color: #FC0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Create Account</h1>
+        <form action="create_account" method="get">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+        
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        
+            <input type="submit" value="Submit">
+        </form>
+    </header>
+    <div id="all">
+    <div class="move"><br><br><br><br>
+        <form action="NewServlet" method="post">
+        Enter a Number: <input type="text" name="n1" required>
+        <br>
+        Enter another Number: <input type="text" name="n2" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form> 
+    </div>
+    <div class="move"><br><h3>hashJSP</h3><br><br><br>
+    <form action="hashlogin.jsp">
+        <label><b>Username: </b></label>
+        <input type="text" placeholder="username" name="username" required="required" maxlength="25"/><br  /><br />
+        <label><b>Password: </b></label>
+        <input type="password" placeholder="password"  name="password" required/><br  /><br  />
+        <input type="reset"> <input type="submit" size="25">
+    </form>
+    </div>
+    <hr>
+    <div class="move"><br><br><br><br>
+    <form action="area.jsp">
+        <h3>Area of Rectangle</h3>
+        <label><b>Side 1: </b></label>
+        <input type="text"  name = "l" required="required" maxlength="25"/><br  /><br />
+        <label><b>Side 2: </b></label>
+        <input type="text" name="b" required/><br  /><br  />
+        <input type="reset"> <input type="submit" size="25">
+    </form>
+    </div>
+    <div class="move"><br><h3>hashJS</h3><br><br><br>
+    <form action="servlet1" method="post">
+        <label><b>Username: </b></label>
+        <input type="text" placeholder="username" name="username" required="required" maxlength="25"/><br  /><br />
+        <label><b>Password: </b></label>
+        <input type="password" placeholder="password"  name="password" required/><br  /><br  />
+        <input type="reset"> <input type="submit" size="25">
+    </form>
+    </div>
+    </div>
+</body>
+</html> 

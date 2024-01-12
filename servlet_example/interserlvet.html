@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        body{
+            background-color: aliceblue;
+            background: linear-gradient(45deg,red 10%,green 50%,blue 60%);
+            display: flex;
+            justify-content: center;
+            align-items: center;/*vertically center*/
+            height: 100vh;
+            
+        }
+        div{
+            margin: 3%;
+            border-radius: 10%;
+            background-color: rgb(241, 112, 0);
+            height: 100px;
+            width: 100px;
+            position: relative;
+            transition: 2s ease;
+            
+            
+        }
+        div:hover{
+            transform: rotate(360deg) scale(1.5, 1.5);
+        }
+    </style>
+</head>
+<body>
+    <form action="servlet1" method="post">
+        <label><b>Username: </b></label>
+        <input type="text" placeholder="username" required="required" maxlength="25"/><br  /><br />
+        <label><b>Password: </b></label>
+        <input type="password" placeholder="password" required/><br  /><br  />
+        <input type="reset"> <input type="submit" size="25">
+    </form>
+    <div>
+        <form action="NewServlet" method="post">
+        Enter a Number: <input type="text" name="n1" required>
+        <br>
+        Enter another Number: <input type="text" name="n2" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form> 
+    </div>
+    <div>
+
+    </div>
+</body>
+</html> 
